@@ -358,7 +358,7 @@ export const enviarSolicitud = async (req, res) => {
         .json({ message: "El usuario ya envio una solicitud." });
     }
 
-    // Si no existe, proceder con la inserción
+    // Si no existe, proceder con la inserciónn
     const [rows] = await pool.query(
       "INSERT INTO solicitud (nombre, codigousuario, descripcion,estado, correo, nombreproyecto) VALUES (?, ?, ?, ?, ?, ?)",
       [nombre, codigousuario, descripcion, estado, correo, nombreProyecto]
